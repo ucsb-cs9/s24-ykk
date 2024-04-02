@@ -71,6 +71,7 @@ _Note: You are able to post anonymously to  your classmates, so the majority of 
 Letter grades will be determined by the end of the course after all labs, homeworks, and exams have been computed. We will not grade harder than a traditional straight scale (90% = A-, 80% = B-, etc.). However, we will adjust the letter grades accordingly based on the class' overall performance at the end of the course. If you are concerned about your grade in the class, I encourage you to discuss the matter with me during my office hours. Please come talk to me sooner rather than later, so there can be some time where we can help you succeed in the course.
 
 Your course grade will be determined as follows:
+<!-- (https://registrar.sa.ucsb.edu/calendars/calendars-deadlines/final-examinations/winter-final-examination-schedule)-->
 
 | Grade Item                                    | Percentage of Final Grade |
 |-----------------------------------------------|---------------------------|
@@ -79,7 +80,6 @@ Your course grade will be determined as follows:
 | Labs                                          | 20 %                      |
 | Midterm (Week 5, Thu 02/08) 2:00pm - 3:15pm   | 35 %                      |
 | Final (Th 06/13), 4:00pm - 6:00pm             | 35 %                      |
-<!-- (https://registrar.sa.ucsb.edu/calendars/calendars-deadlines/final-examinations/winter-final-examination-schedule)-->
 
 In general, homeworks will be assigned periodically throughout the quarter and should be completed on Gradescope by the due date.
 
