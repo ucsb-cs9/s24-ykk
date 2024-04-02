@@ -21,7 +21,7 @@ home:
 offerings:
    title: "s24-ykk"
    url: /	
-   baseurl: /w24
+   baseurl: /s24-ykk
    items:
       - title: "S24 CS9 Home"
         url: /
