@@ -12,8 +12,7 @@ qtr: "S24"
 instructor: "Prof K" 
 quarter: "Spring 2024"
 piazza_url: https://piazza.com/class/luithvjh3op3qg/
-gauchospace_course_page:
-gradescope_class_url: https://www.gradescope.com/courses/762356/assignments
+gradescope_url: https://www.gradescope.com/courses/762356/assignments
 
 github_url: https://github.com/ucsb-cs9/s24-ykk
 
