@@ -16,7 +16,7 @@ production_url: https://ucsb-cs9.github.io
 home:
    title: "UCSB CS 9"
    url: /
-   baseurl: /s24-ykk
+   baseurl: /
 
 offering_links:
    - title: "CS9-S24"
