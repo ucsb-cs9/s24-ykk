@@ -15,8 +15,8 @@ Your first lab for this week is an introduction to making submissions to Gradesc
 
 By the time you have completed this lab, you should have:
 * installed Python
-* created and run Python progams in IDLE
-* submited an assignment using the Gradescope system
+* created and run Python programs in IDLE
+* submitted an assignment using the Gradescope system
 
 ## Python concepts to review
 
@@ -68,7 +68,7 @@ Additionally, since IDLE relies on your writing code yourself, it is a good edit
 You can launch IDLE running Python 3+ as a Windows Application. On a Mac or Unix system, you can start IDLE by typing `idle3` in a terminal window 
 (a program that gives us access to the `command line` interface for the computer). You can access the terminal window by opening up a terminal window:
 
-![terminal icon](Terminal.png)
+![terminal icon](https://ucsb-cs9.github.io/f23/lab/lab00/Terminal.png)
 
 * A Terminal Window should pop up
 * You can then open the IDLE program by typing `idle3`
@@ -77,9 +77,9 @@ If you are encountering any issues or need help, feel free to ask a TA / ULA for
 
 # Create a new lab00.py file
 
-Create a `lab00.py` file in your lab00 directory. This `lab00.py` file will contain the python code you will submit for this lab assignment. 
+Create a `lab00.py` file in your lab00 directory. This `lab00.py` file will contain the Python code you will submit for this lab assignment. 
 
-Steps of creating this new file with IDLE are:
+Steps for creating this new file with IDLE are:
 * Open IDLE on your computer
 * Go to "File" -> "New File", which will create an untitled file.
 * Save this file by going to "File" -> "Save", which will prompt you to save this file in a specified location.
@@ -88,7 +88,7 @@ Steps of creating this new file with IDLE are:
 
 # Copy the following code template into `lab00.py` and complete the function definitions
 
-We will write three python functions for this lab, which reviews some of the concepts covered in CS 8 and the readings in h00.
+We will write three Python functions for this lab, which reviews some of the concepts covered in CS 8 and the readings in h00.
 
 Note that several `assert` statements are included after each function definition. 
 The goal is to run your code such that these assert statements do not produce any errors and your code successfully finishes execution. 
@@ -98,7 +98,7 @@ for testing, which we'll cover later this quarter.
 In Python, code is executed line-by-line from top to bottom. So if your code has an error and an `assert` statement doesn't pass, then you will see which `assert` 
 statement failed and execution will stop (no other statements after the error will be executed).
 
-In order to run your `lab00.py` file in IDLE, go to "Run" -> "Run Module". This will start the execution of the file you're working on and the output will be displayed 
+To run your `lab00.py` file in IDLE, go to "Run" -> "Run Module". This will execute the file you're working on and the output will be displayed 
 in IDLE's Interactive Shell. Remember to configure IDLE to show line numbers - it will make debugging a lot easier (IDLE Settings -> Shell/Ed).
 
 
@@ -153,6 +153,18 @@ assert dict2.get("A") == 2
 assert dict2.get("P") == 3
 assert dict2.get(".") == 1
 assert dict2.get(4) == None
+
+def swap_key_val(database):
+    """
+    	The function expects a database to be a dictionary.
+    	Assuming that an input dictionary has unique values for each key,
+    	return a new dictionary with the keys and values swapped.
+    """
+# COMPLETE FUNCTION DEFINITION HERE
+
+capitals = {"India": "Delhi", "Azerbaijan": "Baku" }
+countries = swap_key_val(capitals)
+assert countries["Baku"] == "Azerbaijan"
 ```
 
 
@@ -161,7 +173,7 @@ assert dict2.get(4) == None
 The lab assignment "Lab00" should appear in your Gradescope dashboard in CMPSC 9. If you haven’t submitted anything for this assignment yet, 
 Gradescope will prompt you to upload your files. This prompt is shown below:
 
-![Gradescope_upload](Gradescope_upload.png)
+![Gradescope_upload.png](https://ucsb-cs9.github.io/f23/lab/lab00/Gradescope_upload.png)
 
 You either can navigate to your file(s) or "drag-and-drop" them into the "Submit Programming Assignment" window.
 
