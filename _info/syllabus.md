@@ -78,7 +78,7 @@ Your course grade will be determined as follows:
 | Academic Integrity Contract                   | 1 %                      |
 | Homeworks                                     | 9 %                      |
 | Labs                                          | 20 %                      |
-| Midterm (Week 5, Thu 02/08) 2:00pm - 3:15pm   | 35 %                      |
+| Midterm (Week 5, Thu 05/02) 3:30pm - 4:45pm   | 35 %                      |
 | Final (Th 06/13), 4:00pm - 6:00pm             | 35 %                      |
 
 In general, homeworks will be assigned periodically throughout the quarter and should be completed on Gradescope by the due date.
