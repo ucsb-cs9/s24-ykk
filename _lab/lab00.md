@@ -19,6 +19,8 @@ By the time you have completed this lab, you should have:
 * submited an assignment using the Gradescope system
 
 ## Python concepts to review
+
+Many of the concepts are covered in Section 1.4 - Review of basic Python ([online section 1.8](https://runestone.academy/ns/books/published/pythonds/Introduction/GettingStartedwithData.html)):
 * defining functions
 * iterating over lists and string characters (using `for` loops)
 * comparing conditions using `if` / `elif` / `else` statements
