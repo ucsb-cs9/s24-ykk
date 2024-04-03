@@ -20,12 +20,15 @@ By the time you have completed this lab, you should have:
 
 ## Python concepts to review
 
-Many of the concepts are covered in Section 1.4 - Review of basic Python ([online section 1.8](https://runestone.academy/ns/books/published/pythonds/Introduction/GettingStartedwithData.html)):
+Many of the concepts are covered in Section 1.4 - Review of basic Python ([online section 1.8](https://runestone.academy/ns/books/published/pythonds/Introduction/GettingStartedwithData.html)). I also recommend [Chapters 1 through 6 from the "AUTOMATE THE BORING STUFF WITH PYTHON"](https://automatetheboringstuff.com/#toc).
+
+To do this lab, you should be comfortable
 * defining functions
 * iterating over lists and string characters (using `for` loops)
 * comparing conditions using `if` / `elif` / `else` statements
 * using string's `.isupper()` / `.islower()` and `.upper()` / `.lower()` methods
 * writing tests using `assert` statements
+* debugging (or at least using `print()` statements to debug your code)
 
 # Get setup with Gradescope
 
