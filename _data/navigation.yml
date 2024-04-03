@@ -18,8 +18,10 @@ home:
    url: /
    baseurl: /s24-ykk
 
-
 offering_links:
+   - title: "CS9-S24"
+     url: /
+     baseurl: /s24-ykk
    - title: Calendar
      url: /info/calendar/
      description: "Assignment Calendar"
