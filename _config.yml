@@ -29,7 +29,7 @@ cal_dates: >
     {"label":"S24 1st day of instruction", "date":"2024-04-01" },
     {"label":"Academic Integrity Contract Due", "date":"2024-04-09" },
     {"label":"S24 deadline to drop courses", "date":"2024-04-26" },
-    {"label":"S24 CS 9 MIDTERM (12:30pm - 1:45pm)", "date":"2024-05-02" },
+    {"label":"S24 CS 9 MIDTERM (3:30pm - 4:45pm)", "date":"2024-05-02" }, # TODO: make sure that this is correct on the syllabus as well!
     {"label":"Holiday: Memorial Day", "date":"2024-05-27" },
     {"label":"S24 instruction ends", "date":"2024-06-07" },
     {"label":"S24 CS 9 FINAL (4:00pm - 6:00pm)", "date":"2024-06-13" },    #  https://registrar.sa.ucsb.edu/calendars/calendars-deadlines/final-examinations                                          
