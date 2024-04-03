@@ -14,18 +14,10 @@ production_url: https://ucsb-cs9.github.io
 # they come from, / for main site, and /f18, /s19, etc for child sites.
 
 home:
-   title: UCSB CS 9
+   title: "UCSB CS 9"
    url: /
-   baseurl: /
-
-offerings:
-   title: "s24-ykk"
-   url: /	
    baseurl: /s24-ykk
-   items:
-      - title: "S24 CS9 Home"
-        url: /
-        baseurl: /w24
+
 
 offering_links:
    - title: Calendar
