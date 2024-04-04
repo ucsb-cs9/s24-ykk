@@ -5,7 +5,7 @@ ready: true
 lecture_date: 2024-04-04 15:30:00.00-7:00
 ---
 
-* Slides: <{{ config.slides_url }}>
+* Slides: [{{ config.slides_url }}]({{ config.slides_url }})
 
 # Plan for today
 - work through the provided handout (included in the slides folder)
