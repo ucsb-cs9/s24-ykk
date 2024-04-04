@@ -19,6 +19,7 @@ Basic Facts
 
 * Textbooks:
   * "Problem Solving with Algorithms and Data Structures Using Python" - Bradley N. Miller & David L. Ranum, 2nd edition
+  * Unofficial version of the Textbook: <https://runestone.academy/runestone/books/published/pythonds/index.html>
 
 Official UCSB Catalog Description
 ---------------------------------
@@ -146,7 +147,4 @@ Standard Disclaimer
 
 This syllabus is as accurate as possible, but is subject to change at the instructor's discretion, within the bounds of UC policy.
 
-_Last Updated: Apr 2, 2024_
-
-
-
+_Last Updated: Apr 4, 2024_ - added the unofficial textbook link
