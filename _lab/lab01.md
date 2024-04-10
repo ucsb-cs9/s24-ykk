@@ -76,12 +76,12 @@ Below are potential objects and corresponding assertions that you can include:
 from Movie import Movie
 
 movie0 = Movie()
-assert movie0.get_title() == None
+assert movie0.title == None
 ### TODO: write additional asserts for the other methods
 ### to test the default form of the constructor
 
 movie1 = Movie("About time", "Drama", 2013)
-assert movie1.get_title() == "About time"
+assert movie1.title == "About Time"
 ### TODO: write additional asserts for the other methods
 assert movie1.to_string() == '"About Time" (DRAMA) - 2013'
 
@@ -133,7 +133,8 @@ movie3 = Movie("Poor Things", "Thriller", 2023)
 movies.add_movie(movie1)
 movies.add_movie(movie2)
 
-#try to create more movie objects and add them in the MovieList, you must use assert statements as shown below to test if the movie objects were inserted correctly to the MovieList
+'''try to create more movie objects and add them in the MovieList, 
+you must use assert statements as shown below to test if the movie objects were inserted correctly to the MovieList'''
 
 assert movies.does_movie_exist(movie1) == True
 assert movies.does_movie_exist(movie2) == True
@@ -149,7 +150,8 @@ assert movies.does_movie_exist(movie1) == False
 assert movies.does_movie_exist(movie2) == True
 assert movies.does_movie_exist(movie3) == True
 
-#do the same for the other movie objects in the MovieList. use the assert statements as shown to check if the movie objects were removed correctly
+'''do the same for the other movie objects in the MovieList. 
+use the assert statements as shown to check if the movie objects were removed correctly'''
 
 movie1 = Movie("La La Land", "Rom-com", 2016)
 movie2 = Movie()
@@ -166,7 +168,7 @@ movies.add_movie(movie5)
 
 assert movies.get_movies_by_genre("Rom-com") == \
 '''"La La Land" (ROM-COM) - 2016
-"Eternal Sunshine Of The Spotless Mind" (SCI-FI) - 2004'''
+"Eternal Sunshine Of The Spotless Mind" (ROM-COM) - 2004'''
 
 assert movies.get_movies_by_genre("Drama") == \
 '''"About Time" (DRAMA) - 2013'''
@@ -176,7 +178,7 @@ assert movies.get_movies_by_genre("Sci-Fi") == ""
 movies.remove_genre("Sci-Fi")
 assert movies.get_movies_by_genre("Rom-com") == \
 '''"La La Land" (ROM-COM) - 2016
-"Eternal Sunshine Of The Spotless Mind" (SCI-FI) - 2004'''
+"Eternal Sunshine Of The Spotless Mind" (ROM-COM) - 2004'''
 assert movies.get_movies_by_genre("Drama") == \
 '''"About Time" (DRAMA) - 2013'''
 assert movies.get_movies_by_genre("Sci-Fi") == ""
@@ -192,6 +194,7 @@ assert movies.get_movies_by_genre("Rom-com") == ""
 assert movies.get_movies_by_genre("Drama") == ""
 assert movies.get_movies_by_genre("Sci-Fi") == ""
 ```
+
 
 Please make sure that your logic for all the methods in MovieList.py pass the above example assert statements. 
 <b>IMPORTANT: You are highly encouraged to test your code locally with additional assert statements before you submit your files to Gradescope - please do not use Gradescope to debug.</b>
