@@ -5,6 +5,8 @@ ready: true
 lecture_date: 2024-04-09 15:30:00.00-7:00
 ---
 
+* [Slides folder]({{ site.slides_url }}){:target="_blank"}
+
 # Plan for today
 - What are objects and classes and why do we need them
 - How to create a new class (constructors, etc)
@@ -27,6 +29,7 @@ class Song:
 ```
 
 * Use a class in a different file with: `from Song import Song`
+  * which stands for `from [filename (without .py)] import [component]`
 
 * Constructors: called when a new class object is created, sets the attributes to the values passed in by the parameters
   * Default constructor: `__init__(self, title, genre)`

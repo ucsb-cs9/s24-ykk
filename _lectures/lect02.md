@@ -5,7 +5,7 @@ ready: true
 lecture_date: 2024-04-04 15:30:00.00-7:00
 ---
 
-* Slides: [{{ config.slides_url }}]({{ config.slides_url }})
+* [Slides folder]({{ site.slides_url }}){:target="_blank"}
 
 # Plan for today
 - work through the provided handout (included in the slides folder)
@@ -30,4 +30,4 @@ Related textbook section: [Getting Started with Data](https://runestone.academy/
     *   Control structures
         * `if, else, elif`
     * Loops
-        * `for` (relies in `range()`), `while`
+        * `for` (relies on `range()`; helpful with `enumerate()`), `while`
