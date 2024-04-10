@@ -14,7 +14,7 @@ In this lab, you'll have the opportunity to practice:
 
 **Note:** In general, it is always important to work on labs and reading early so you can gain the proper context and utilize our office hours to seek assistance / ask clarifying questions during the week before the deadline, if needed!
 
-It is a good idea to read up on some tools we'll use in this lab before you get started, specifically Chapter 1.4.2.1 (String Formatting) and 1.4.6 - 1.4.6.1 (Object Oriented Programming).
+It is a good idea to read up on some tools we'll use in this lab before you get started, specifically **Chapter 1.4.2.1 (String Formatting)** and **1.4.6 - 1.4.6.1 (Object Oriented Programming)**.
 
 The main idea for this lab is to write a program that will organize Movies into a Movie list. The program should have the ability to add / remove / search for movies.
 
@@ -22,11 +22,11 @@ The main idea for this lab is to write a program that will organize Movies into 
 
 We recommend that you organize your lab work for this lab in its own directory, e.g., `lab01`. This way all files for a lab are located in a single folder. Also, this will be easy to import various files into your code using the `import / from` technique shown in lecture.
 
-You will need to create two files (note that the file names are case-sensitive when we import them in Python!):
-* `Movie.py` - file containing a class definition for a Movie object.
-* `MovieList.py` - file containing a class definition for a MovieList object.
+You will need to create three files (note that the file names are case-sensitive when we import them in Python!):
+* `Movie.py` - a file containing a class definition for a Movie object.
+* `MovieList.py` - a  file containing a class definition for a MovieList object.
+* `testFile.py` - a file with the tests for the class methods.
 
-There will be no starter code for this assignment, but rather the class descriptions and required methods are defined in the specification below.
 
 ## `Movie.py` class
 
@@ -67,6 +67,29 @@ print(movie2.to_string())
 
 <b>IMPORTANT:</b> The `.to_string()` return value in the example above does **not** contain a newline character (`\n`) at the end.
 
+## Test your code
+
+To ensure that your methods return the correct values of correct types, create a file `testFile.py` to hold the tests for the methods.
+
+Below are potential objects and corresponding assertions that you can include:
+```
+from Movie import Movie
+
+movie0 = Movie()
+assert movie0.get_title() == None
+### TODO: write additional asserts for the other methods
+### to test the default form of the constructor
+
+movie1 = Movie("About time", "Drama", 2013)
+assert movie1.get_title() == "About time"
+### TODO: write additional asserts for the other methods
+assert movie1.to_string() == '"About Time" (DRAMA) - 2013'
+
+### TODO: write additional asserts for at least one other movie
+
+```
+
+
 ## MovieList.py
 
 The `MovieList.py` file will contain the definition of a single MovieList object.
@@ -81,6 +104,9 @@ Your code should support the following constructor and methods:
 
 * `add_movie(self, movie)` - Adds a Movie object (`movie`) to the MovieList. The inserted Movie object should be added to the end of the list of existing movies that are of the same genre. You may assume that a movie with the same attributes does not already exist in the MovieList when this method is called.
 
+* `does_movie_exist(self, movie)` - Returns a Boolean `True` if the parameter `movie` (with matching title, genre, year) exists in the MovieList. Returns `False` otherwise.
+
+
 * `remove_movie(self, movie)` - Removes a Movie object (`movie`) from the MovieList if it exists. Your code will need to check that the provided parameter `movie` object has the same attributes (title, genre, year) as an existing movie in the MovieList, if it is to be removed from the MovieList. 
 
 * `remove_genre(self, genre)` - Removes all movies of a certain genre from the MovieList if it exists. Your code will need to remove the genre entry from the MovieList's dictionary.  Note: the provided `genre` parameter value may be input in either lower / upper case.
@@ -93,13 +119,12 @@ Your code should support the following constructor and methods:
    -  Note: the `genre` parameter value may be in either lower / upper case.
 
 
-* `does_movie_exist(self, movie)` - Returns a Boolean `True` if the parameter `movie` (with matching title, genre, year) exists in the MovieList. Returns `False` otherwise.
 
-
-
-Given an example MovieList:
+Given an example MovieList, add the following objects and assertions to your `testFile.py`:
 
 ```python
+
+### remember to import the correct module into your testFile.py
 
 movies = MovieList()
 movie1 = Movie("La La Land", "Musical", 2016)
@@ -142,10 +167,12 @@ movies.add_movie(movie5)
 assert movies.get_movies_by_genre("Rom-com") == \
 '''"La La Land" (ROM-COM) - 2016
 "Eternal Sunshine Of The Spotless Mind" (SCI-FI) - 2004'''
+
 assert movies.get_movies_by_genre("Drama") == \
 '''"About Time" (DRAMA) - 2013'''
 assert movies.get_movies_by_genre("Sci-Fi") == ""
 
+# check that the removal is working correctly
 movies.remove_genre("Sci-Fi")
 assert movies.get_movies_by_genre("Rom-com") == \
 '''"La La Land" (ROM-COM) - 2016
@@ -172,7 +199,7 @@ Please make sure that your logic for all the methods in MovieList.py pass the ab
 
 ## Submission
 
-Once you're done with writing your class definition, submit your `Movie.py`, and `MovieList.py` to the `Lab01` assignment on Gradescope. There will be various unit tests Gradescope will run to ensure your code is working correctly based on the specifications given in this lab.
+Once you're done with writing your class definition, submit your `testFile.py`, `Movie.py`, and `MovieList.py` to the `Lab01` assignment on Gradescope. There will be various unit tests Gradescope will run to ensure your code is working correctly based on the specifications given in this lab.
 
 If the tests don't pass, you may get some error message that may or may not be obvious at this point. Don't worry - if the tests didn't pass, take a minute to think about what may have caused the error. Check the Troubleshooting guide below.
 If your tests didn't pass and you're still not sure why you're getting the error, feel free to ask your TAs or Learning Assistants.
