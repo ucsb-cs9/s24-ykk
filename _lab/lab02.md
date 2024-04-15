@@ -3,8 +3,8 @@ layout: lab
 num: lab02
 ready: true
 desc: "Tea Shop"
-assigned: 2024-01-19 19:00:00.00-7:00
-due: 2024-01-29 23:59:00.00-7:00
+assigned: 2024-04-16 11:00:00.00-7
+due: 2024-04-23 23:59:00.00-7:00
 ---
 
 # Table of Contents
