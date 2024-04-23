@@ -1,6 +1,6 @@
 ---
 num: "Lecture 6"
-desc: ""
+desc: "Inheritance, Midterm review, Asymptotic Behavior"
 ready: true
 lecture_date: 2024-04-18 15:30:00.00-7:00
 ---
@@ -61,8 +61,40 @@ print("list_append:", f2_time)
 ## Asymptotic Behavior
 * We want to analyze approximately how fast an algorithm runs when the size of the input approaches infinity
 * So instead of calculating the raw time of how fast the algorithm runs on our computers, we can approximate the number of instructions the algorithm will take with respect to the size of the input
+* See how the different functions look as we increase the N: <https://science.slc.edu/~jmarshall/courses/2002/spring/cs50/BigO/index.html>
+
 
 ## Recursion
 * Recursion is when a function contains a call to itself
 * Recursive solutions iteratively call themselves with a smaller input until a base case is reached
 
+A simple recursive function:
+```
+def count(n):
+    if n == 0:
+        print("Hello!")
+    else:
+        print(n)
+        count(n-1)
+```
+
+Call it using `count(3)` to see it produce:
+```
+3
+2
+1
+Hello!
+```
+
+How can we modify this function to now output the following?
+```
+3
+2
+1
+Hello!
+1
+2
+3
+```
+
+You might find it helpful to run through this example in Python Tutor to see the state of the function calls and the arguments that they are called with.
