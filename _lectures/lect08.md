@@ -44,57 +44,142 @@ lecture_date: 2024-02-06 15:30:00 -0700
   - Pay attention to any loop exits such as `return` and `break` statements, which shorten running time
 
 # Time Complexity Iclicker Questions
-- Question 1:
+
+### Question 1:
 ```py
+def print_pair(n):
+  for i in range(n):
+	 for val in range(n):
+		print(i, val) 
 ```
 
-Time complexity: O(n^2)
 
-- Question 2:
+* O(n) - outer for `i` loop
+* O(n) - innder for `val` loop
+* O(1) - constant work to print two values
+Because of the loop nesting:
+Time complexity: O(n^2) = O(n) * O(n) * O(1)
+
+
+### Question 2:
 ```py
+def print_pair(n):
+  for i in range(n):
+	 for val in range(n*n):
+		print(i, val) 
 ```
 
 Time complexity: O(n^3)
+* O(n) - outer for `i` loop
+* O(n^2) - inner for `val` loop (because of `n*n`)
+* O(1) - constant work to print two values
+Because of the loop nesting:
+Time complexity: O(n^3) = O(n) * O(n^2) * O(1)
 
-- Question 3
+### Question 3
 ```py
+def print_pair(n):
+  for i in range(n):
+	 for val in range(n):
+		print(i, val) 
+
+for num in range(0, 1000):
+  print_pair(num)
 ```
 
-Time complexity: O(n^2)
+Even though the for loop runs in constant time, its body runs in quadratic as we saw earlier.
 
-- Question 4:
+However, because this specific algorithm is driven by `num`, which is constant, the entire algorithm is constant `O(1)`.
+
+As a sanity check, if we were to plug our nested `for` loops from the function into the `for num in range(0, 1000):` loop, we'll see that the `n` in those loops becomes fixed to 1000 as its max value.
+
+
+### Question 4:
 ```py
+def print_pair(n):
+  for i in range(n):
+	 if i == 100:
+		break
+	 for val in range(n):
+		print(i, val) 
+```
+Rememeber: `break` gets us out of the innermost loop that it is housed in.
+* O(1) - outer `for i` loop, because as soon as `i == 100` the outer loop stops because of the `break` (in the worst case, it is independent of the input it receives)
+* O(n) - inner `for val` loop (because it runs proportionally to `n` for the first 100 iterations)
+* O(1) - constant work to print two values
+Because of the loop nesting:
+Time complexity: O(n) = O(1) * O(n) * O(1)
+
+### Question 5:
+```py
+def print_pair(n):
+  for i in range(n):
+	 if i == 100:
+		break
+	 print(“*”*i)
+  for val in range(n):
+	 print(i*val) 
 ```
 
-Time complexity: 
+* O(1) - the first `for i` loop, because as soon as `i == 100` the loop stops (in the worst case, it is independent of the input it receives)
+* O(n) - the second `for val` loop (because it runs proportionally to `n`), after the `for i` finishes its execution 
+* O(1) - constant work to print two values (`i` remains set to 100 because that's the value that broke us out of the first for loop)
 
-- Question 5:
+Because of the loop sequencing:
+Time complexity: O(n) = O(1) + O(n)
+
+### Question 6:
 ```py
-```
-
-Time complexity: O(n)
-
-- Question 6:
-```py
+def print_pair(n):
+  for i in range(n):
+	 if i == 100:
+		return
+ 	 print(“*”*i)
+  for val in range(n):
+	 print(i*val) 
 ```
 
 Time complexity: O(1)
+* O(1) - the first for `i` loop, because as soon as `i == 100` the loop _and the entire function_ stops due to the `return` (in the worst case, it is independent of the input it receives)
 
-- Question 7:
+
+### Question 7:
 ```py
+def print_pair(n):
+  i = 0
+  for j in range(n):
+	 while i < j:
+		print(i, j) 
+		i += 1
 ```
 
 Time complexity: 
 
-- Question 8:
+### Question 8:
 ```py
+def print_pair(n):
+  i = 0
+  for j in range(n):
+	 while i <= j:
+		print(i, j) 
+		i += 1
+  	 i = 0
 ```
 
 Time complexity: 
 
-- Question 9:
+### Question 9:
 ```py
+def print_pair(n):
+  for i in range(n):
+	 for j in range(n, 0, -1):
+		if i == j:
+			break
+		print(i, val) 
 ```
+
+`break` gets us out of the innermost loop
+
 
 Time complexity:   O(n^2)
 
