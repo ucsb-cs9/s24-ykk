@@ -2,7 +2,7 @@
 num: "Lecture 8"
 desc: "Algorithm Analysis, Python List and Dictionary"
 ready: true
-lecture_date: 2024-02-06 15:30:00 -0700
+lecture_date: 2024-04-25 15:30:00 -0700
 ---
 
 [Slides folder]({{ site.slides_url }})
