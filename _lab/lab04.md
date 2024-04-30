@@ -7,7 +7,24 @@ assigned: 2024-04-30 23:59:59.59-7
 due: 2024-05-09 23:59:59.59-7
 ---
 
-# Learning Goals
+## Table of Contents
+* [Learning Goals](#learning-goals)
+* [Solving a maze](#solving-a-maze)
+* [Representing a maze](#representing-a-maze)
+* [Traversing the maze](#traversing-the-maze)
+* [Utilizing a Stack](#utilizing-a-stack-to-keep-track-of-where-weve-visited)
+* [Instructions](#instructions)
+	* [`Stack.py`](#stackpy)
+	* [`lab04.py`](#lab04py)
+	* [`testFile.py`](#testfilepy)
+* [Submission](#submission)
+* [Additional Resources](#step-by-step-traversal-of-the-maze)
+	* Step-by-step traversal
+	* Visual walkthrough (video) 
+* [Troubleshooting](#troubleshooting)
+
+
+## Learning Goals
 
 In this lab, you'll practice:
 
@@ -18,20 +35,7 @@ In this lab, you'll practice:
 
 _For this writeup, it might be helpful to draw the provided mazes and write the indices next to the rows and columns to make it easier to follow the instructions._
 
-# Instructions
-
-For this lab, you will need to create three files:
-* `lab04.py` - file containing your solution to writing the `maze_path_exists` function as described in this writeup
-* `Stack.py` - file containing your class definition of a Python Stack using Python Lists
-* `testFile.py` - file containing pytest functions testing if your solution works as expected for your own mazes you'll create. **Note:** Gradescope's autograder requires you to submit your `testFile.py` in order for it to run your code (hopefully you're practicing TDD and use your tests to check correctness!) 
-
-<!--
-There will be no starter code for this assignment, but rather function descriptions and helper functions are given in the specification below.
-
-It's recommended that you organize your lab work in its own directory. This way, all files for a lab are located in a single folder. Also, this will be easy to import various files into your code using the `import / from` technique shown in lecture.
--->
-
-## Solving a maze
+## Solving a Maze
 
 We can explore and solve a maze by utilizing a Stack data structure. The idea is: given coordinates (x,y positions), we can explore the maze in different directions until we reach dead-ends or our goal. If we do reach a dead-end, a Stack data structure can help us keep track of coordinates we've visited and allow us to "backtrack" to a certain point.
 
@@ -60,6 +64,7 @@ The above example is a 6 x 6 maze.
 _In the above example, `G` is located at `maze[0][4]`, so `maze[0]` contains the list where `G` is found._
 
 If you would like to review Python 2D Lists, you may find the following CS 8 notes useful: <https://ucsb-cs8.github.io/m19-wang/lectures/lect10/>
+
 
 **Note: This layout is different than a traditional cartesian coordinate system. As we move right the y value increases, as we move left the y value decreases, as we move up the x value decreases, and as we move down the x value increases.**
 
@@ -144,6 +149,19 @@ Instead of using a recursive solution like the book describes, we will use a Sta
 * The top of our Stack will be the current position we're at, and check if we are able to move to a valid adjacent coordinate. If not, then we need to remove that position from the Stack and check the next top element in the Stack (containing a `x,y` position that has more directions to check).
 	* As long as there are items in the Stack, that means there are still positions that have possible directions to check.
 	* If our Stack does not have any items, this implies there are no more positions with directions to check. If we haven't reached our goal at this point, then this implies there is no path from the given starting position to the goal.
+	
+
+## Instructions
+
+For this lab, you will need to create three files:
+* `Stack.py` - file containing your class definition of a Python Stack using Python Lists
+* `lab04.py` - file containing your solution to writing the `maze_path_exists` function as described in this writeup
+* `testFile.py` - file containing pytest functions testing if your solution works as expected for your own mazes you'll create. **Note:** Gradescope's autograder requires you to submit your `testFile.py` in order for it to run your code (hopefully you're practicing TDD and use your tests to check correctness!) 
+
+
+There will be no starter code for this assignment, but rather function descriptions and helper functions are given in the specification below.
+
+It's recommended that you organize your lab work in its own directory. This way, all files for a lab are located in a single folder. Also, this will be easy to import various files into your code using the `import / from` technique shown in lecture.
 
 ## `lab04.py`
 
@@ -268,10 +286,10 @@ If you'd like an additional walkthrough, here's a handwritten explanation of the
 
 ## Troubleshooting
 
-* Initial Position Misuse: Ensure that the starting coordinates (`start_x, start_y`) are used only once for initializing the starting position in the maze. Reusing or modifying these initial coordinates incorrectly during the traversal can lead to incorrect path tracking.
+* Ensure that the starting coordinates (`start_x, start_y`) are used only **once** for initializing the starting position in the maze. Reusing or modifying these initial coordinates incorrectly during the traversal can lead to incorrect path tracking.
 
-* Failure to Mark Positions: Each position you move to must be immediately marked with the current step number. This marking is crucial to avoid revisiting and looping back to previously explored locations, which can lead to infinite loops.
+* Each position you move to must be immediately marked with the current step number. This marking is crucial to avoid revisiting and looping back to previously explored locations, which can lead to infinite loops.
 
-* Stack Management: Properly manage the stack by ensuring that only viable paths are pushed onto it and that backtracking is handled correctly by popping the stack when no moves are possible. Neglecting proper stack management can cause premature termination or missing the correct path.
+*  Properly manage the stack by ensuring that only viable paths are pushed onto it and that backtracking is handled correctly by popping the stack when no moves are possible. Neglecting proper stack management can cause premature termination or missing the correct path.
 
 
