@@ -73,7 +73,7 @@ We reviewed operator overloading in class and the textbook does discuss overload
 
 [https://www.geeksforgeeks.org/operator-overloading-in-python/](https://www.geeksforgeeks.org/operator-overloading-in-python/)
 
-## BookCollection.py 
+## BookCollectionNode.py 
 
 The `BookCollectionNode.py` file will define the `BookCollectionNode` class. This will be similar to the Linked List Node implementation done in lecture. You will need to write the following methods:
 
@@ -84,7 +84,7 @@ The `BookCollectionNode.py` file will define the `BookCollectionNode` class. Thi
 * `set_next(self, newNext)` - updates the Node's next reference with the newNext parameter (another `BookCollectionNode`)
 
 
-## BookCollectionNode.py
+## BookCollection.py
 
 The `BookCollection.py` file will contain the definition of a collection of Book objects stored in an Ordered Linked List. The BookCollection will manage an Ordered Linked List containing `BookCollectionNode`s.The `BookCollection` class will be responsible for maintaining the overall structure of the Ordered Linked List. Your `BookCollection` class will need to support the following methods:
 
