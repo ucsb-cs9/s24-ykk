@@ -41,6 +41,25 @@ class SongNode:
     self.next = None
 ```
 
+Add to the front of a linked list:
+```py
+def prepend(self, item):
+  new_node = Node(item)
+  new_node.set_next(self.head)
+  self.head = new_node
+```
+
+Count number of nodes in a linked list:
+```py
+def length(self):
+  current = self.head
+  count = 0
+  while current != None:
+    count += 1
+    current = current.get_next()
+  return count
+```
+
 # Comparing nodes
 How to compare two SongNode objects?
 - There are multiple possibilities, eg: compare objects based only on their duration
@@ -56,7 +75,5 @@ def __lt__(self, other):
 - No need to specify the size of the list
 - Linked lists are a dynamic data structure
 
-# Count number of elements in Linked List
-- While the .next field != None, there is more to the linked lists, so count += 1
-
 # Student Questions
+- 
