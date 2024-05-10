@@ -192,3 +192,5 @@ If the tests don't pass, you may get some error message that may or may not be o
 * Avoid infinite loops by ensuring loop exit conditions are correct.
 
 * Ensure case-insensitive comparisons for author names; test removals thoroughly to confirm all books by a specific author are removed, including consecutive ones.
+
+* If you get the error `Incorrect logic for get_books_by_author method after adding a single book with author ...` make sure that you correctly implemented the method that the error is alerting you about.
