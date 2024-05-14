@@ -1,5 +1,5 @@
 ---
-num: "Lecture 10"
+num: "Lecture 11"
 desc: "Linked Lists"
 ready: true
 lecture_date: 2024-05-07 15:30:00 -0700
@@ -13,6 +13,11 @@ lecture_date: 2024-05-07 15:30:00 -0700
 - Main functions for linked lists and their Big-O runtimes?
 - How can we implement a linked list?
 - Why is the order of operations so important?
+
+# Stack, Queue, Deque
+- Stack ADT: https://youtu.be/X_YM_ZnkN6k (15 min)
+- Queue ADT: https://youtu.be/U1J_U-Fwlzg (10 min)
+- Deque ADT: https://youtu.be/4wFTHsTnclU (15.5 min)
 
 # Linked Lists vs. Lists
 Lists:
@@ -31,6 +36,7 @@ class Node:
 ```
 - If the constructor required us to pass in an object and create it directly, the above code would look different (see next example).
 
+SongNode in-class activity: https://t.ly/HHoM7
 Define a SongNode class that keeps track of the object (artist, title, duration), and the link to the next object
 ```py
 class SongNode:
@@ -39,9 +45,39 @@ class SongNode:
     self.title = title
     self.duration = duration
     self.next = None
+
+  def get_next(self):
+	  return self.next
+
+  def set_next(self, newNext):
+  	self.next = newNext
 ```
 
-Add to the front of a linked list:
+# Comparing nodes
+How to compare two SongNode objects?
+- There are multiple possibilities, eg: compare objects based only on their duration
+
+SongNode in-class activity: https://tinyurl.com/cs9songnode1
+Overloading comparison operators:
+- Overload the less than (<) operator: example: compare only by duration
+```py
+def __lt__(self, other):
+  return self.data.duration < other.data.get_duration()
+```
+
+# Benefits of Linked Lists
+- No need to specify the size of the list
+- Linked lists are a dynamic data structure
+- Linear data structures like stacks and queues are often easily implemented using a linked list
+- No need to shift elements after the insertion or deletion of an element.
+  - Scalable
+  - Great for large datasets
+ 
+# Question & Example SongList
+- In-class activity: https://tinyurl.com/cs9linked1
+- What's the easiest to insert an element into a linked list?: at the front
+
+  Add to the front of a linked list:
 ```py
 def prepend(self, item):
   new_node = Node(item)
@@ -60,20 +96,21 @@ def length(self):
   return count
 ```
 
-# Comparing nodes
-How to compare two SongNode objects?
-- There are multiple possibilities, eg: compare objects based only on their duration
-
-Overloading comparison operators:
-- Overload the less than operator
+Remove an element from the linked list:
 ```py
-def __lt__(self, other):
-  return self.data.duration < other.data.get_duration()
+def remove(self, item):
+  current = self.head
+  previous = None
+  found = False
+  # while loop to iterate through the linked list and find the node to remove
 ```
 
-# Benefits of Linked Lists
-- No need to specify the size of the list
-- Linked lists are a dynamic data structure
+Check if linked list is empty or at the end of the list:
+```py
+while not found:
+  if current == None:
+    return
+```
 
 # Student Questions
 - 
