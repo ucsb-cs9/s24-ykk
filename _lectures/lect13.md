@@ -64,7 +64,7 @@ class Pet:
     self.animal = animal
     self.rating = rating
 
-  def __repre__(self):
+  def __repr__(self):
     animal_map = {'snake': 100, 'cat': 90, 'dog': 80}
     rating_map = {'meh': 0, 'ok': 1, 'nice': 2, 'awesome': 3}
     return f"Name {self.name}\nAnimal type: {self.animal} (animal_map[self.animal])\n \
@@ -77,6 +77,14 @@ class Pet:
     if animal_map[self.animal] < animal_map[other.animal]:
       return True
     return False
+  # or
+  def __lt__(self, other):
+    animal_map = {'snake': 100, 'cat': 90, 'dog': 80}
+    rating_map = {'meh': 0, 'ok': 1, 'nice': 2, 'awesome': 3}
+
+    if animal_map[self.animal] == animal_map[other.animal]:
+      return rating_map[self.animal] < rating_map[other.animal]
+    return animal_map[self.animal] < animal_map[other.animal]
 ```
 
 # Student Questions
