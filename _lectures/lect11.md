@@ -37,7 +37,7 @@ class Node:
 - If the constructor required us to pass in an object and create it directly, the above code would look different (see next example).
 
 SongNode in-class activity: https://t.ly/HHoM7
-Define a SongNode class that keeps track of the object (artist, title, duration), and the link to the next object
+- Define a SongNode class that keeps track of the object (artist, title, duration), and the link to the next object
 ```py
 class SongNode:
   def __init__(self, artist, title, duration):
@@ -58,8 +58,8 @@ How to compare two SongNode objects?
 - There are multiple possibilities, eg: compare objects based only on their duration
 
 SongNode in-class activity: https://tinyurl.com/cs9songnode1
-Overloading comparison operators:
-- Overload the less than (<) operator: example: compare only by duration
+- Overloading comparison operators:
+	- Overload the less than (<) operator: example: compare only by duration
 ```py
 def __lt__(self, other):
   return self.data.duration < other.data.get_duration()
