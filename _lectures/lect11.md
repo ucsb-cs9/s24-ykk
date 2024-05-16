@@ -113,4 +113,9 @@ while not found:
 ```
 
 # Student Questions
-- 
+Q: Why do you include a backslash (\) in a return statement? 
+A: Backslashes are used to create a multiline return statement
+
+Q: Assert statements when using comparison operators
+A: You need to include parentheses to indicate order of operations
+	- eg: `(pet1 < pet2) == true` instead of `pet1 < pet2 == true`
