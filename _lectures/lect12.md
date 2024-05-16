@@ -7,15 +7,15 @@ lecture_date: 2024-05-09 15:30:00 -0700
 
 [Slides folder]({{ site.slides_url }})
 
-[Recorded video]()
 
 # Plan for today
-Iclicker review of last class
-Linked list vs ordered linked list
-How to delete an item from linked list
-How to add an item to an ordered linked list
+- Iclicker review of last class
+- Linked list vs ordered linked list
+- How to delete an item from linked list
+- How to add an item to an ordered linked list
 
 # Iclicker Questions
+'''
 Question 1:
 Which of the following assertions is False
 A linked list is...
@@ -46,6 +46,7 @@ Given the following lines of code, what order do they need to go in to correctly
 
 Question 5:
 Which operator do we need to overload to implement object comparison as follows?
+'''
 
 # Linked List versus Ordered Linked List
 (Unordered) Linked Lists
@@ -58,7 +59,7 @@ Ordered Linked List is similar to Unordered Linked List
 -Adding the node requires us to put a node in the correct position
 
 # Note
-- Add practice for overloading operators 
+- Add practice for overloading operators @ykharitonova
 
 How to remove an element from a LinkedList?
   1. What do we need to remove an element from a Linked List?
@@ -94,3 +95,5 @@ Case 2: Add a node past the start of the list
 - Bubble sort O(n^2) --> Bubble the largest element to the end of the list
 - Selection sort O(n^2) --> Find the INDEX of the largest element and swap it to the last spot
 - Worst case for these algorithms: A list sorted in reverse order
+- Visualization: https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/
+  
