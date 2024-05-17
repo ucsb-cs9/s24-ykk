@@ -2,7 +2,7 @@
 num: "Lecture 13"
 desc: "Sorting Algorithms"
 ready: true
-lecture_date: 2024-05-07 15:30:00 -0700
+lecture_date: 2024-05-14 15:30:00 -0700
 ---
 
 # In-class activity: sorting algorithm excerises
