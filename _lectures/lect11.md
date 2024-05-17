@@ -15,9 +15,9 @@ lecture_date: 2024-05-07 15:30:00 -0700
 - Why is the order of operations so important?
 
 # Stack, Queue, Deque
-- Stack ADT: https://youtu.be/X_YM_ZnkN6k (15 min)
-- Queue ADT: https://youtu.be/U1J_U-Fwlzg (10 min)
-- Deque ADT: https://youtu.be/4wFTHsTnclU (15.5 min)
+- Stack ADT: <https://youtu.be/X_YM_ZnkN6k> (15 min)
+- Queue ADT: <https://youtu.be/U1J_U-Fwlzg> (10 min)
+- Deque ADT: <https://youtu.be/4wFTHsTnclU> (15.5 min)
 
 # Linked Lists vs. Lists
 Lists:
@@ -36,7 +36,7 @@ class Node:
 ```
 - If the constructor required us to pass in an object and create it directly, the above code would look different (see next example).
 
-SongNode in-class activity: https://t.ly/HHoM7
+SongNode in-class activity: <https://t.ly/HHoM7>
 - Define a SongNode class that keeps track of the object (artist, title, duration), and the link to the next object
 ```py
 class SongNode:
@@ -57,7 +57,7 @@ class SongNode:
 How to compare two SongNode objects?
 - There are multiple possibilities, eg: compare objects based only on their duration
 
-SongNode in-class activity: https://tinyurl.com/cs9songnode1
+SongNode in-class activity: <https://tinyurl.com/cs9songnode1>
 - Overloading comparison operators:
 	- Overload the less than (<) operator: example: compare only by duration
 ```py
@@ -113,9 +113,9 @@ while not found:
 ```
 
 # Student Questions
-Q: Why do you include a backslash (\) in a return statement? 
-A: Backslashes are used to create a multiline return statement
+Q: Why do you include a backslash (`\`) in a return statement? 
+A: Backslashes are used to create a multiline statement, so when we use it in the return statement, we can write our `and` condition on multiple lines (to make it easier to see its parts)
 
 Q: Assert statements when using comparison operators
 A: You need to include parentheses to indicate order of operations
-	- eg: `(pet1 < pet2) == true` instead of `pet1 < pet2 == true`
+	- eg: `assert (pet1 < pet2) == True` instead of `assert pet1 < pet2 == True`
