@@ -5,7 +5,8 @@ ready: true
 lecture_date: 2024-05-16 15:30:00 -0700
 ---
 
-[Lecture recording](https://www.loom.com/share/42a487a77e02493a9671ee372cc91acd?sid=2c5b0abd-bddd-4258-8bc0-6d11c79a925f)
+* [Slides folder]({{ site.slides_url }}){:target="_blank"}
+* [Lecture recording](https://www.loom.com/share/42a487a77e02493a9671ee372cc91acd?sid=2c5b0abd-bddd-4258-8bc0-6d11c79a925f){:target="_blank"}
 
 # Plan for today
 - Announcement about class on Tuesday
@@ -30,7 +31,7 @@ lecture_date: 2024-05-16 15:30:00 -0700
 - Note the neight is log n
 - For each level, the merge step needs to compare n elements (O(n))
 - If there are log n levels and we need to do n comparisions to merge the elements for each level, then we have:
-  - n * log n --> O(n log n) running time
+  - n * log n results in O(n log n) running time
 - Disadvantage of mergesort: O(n) additional space when creating left and right lists
 
 # Mergesort Activity
@@ -52,7 +53,10 @@ left and right _copies_ of the list.
 # Visualize Mergesort 
 - Splitting - O(log n)
 - Merging - O(n)
-- # TODO: add visualization
+
+[The visualization of the algorithm](lectures/lect14-merge-sort-viz-alg.jpg){:target="_blank"}
+
+[The visualization of O(n log n) derivation](lectures/lect14-merge-sort-big-o.jpg){:target="_blank"}
 
 # Iclicker check-in
 Question 1: Given a list `[5, 4, 3, 2, 1]`, according to the book, what is the 2nd call added to the stack for the `merge_sort()`?
