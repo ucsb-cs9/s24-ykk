@@ -23,12 +23,12 @@ lecture_date: 2024-05-16 15:30:00 -0700
 # Divide and Conquer Algorithms
 - Subdivide a larger problem into smaller problems
 - Solve each small part
-- Combine smaller subproblem solutions into larger problem
+- Combine smaller subproblem solutions to a larger problem
 - Similar to recursion
 
 # Mergesort highlights 
 - Break the list into two equal parts in each recursive iteration
-- Note the neight is log n
+- Note the height is log n
 - For each level, the merge step needs to compare n elements (O(n))
 - If there are log n levels and we need to do n comparisions to merge the elements for each level, then we have:
   - n * log n results in O(n log n) running time
@@ -40,6 +40,7 @@ lecture_date: 2024-05-16 15:30:00 -0700
 - What asserts do we need to test the accuracy of the function?
   - Empty list1 and/or list 2
   - One element in each list
+
 ```
 def sort_sorted_lists(listleft, listright, final):
   # TODO: add solution
@@ -59,7 +60,9 @@ left and right _copies_ of the list.
 [The visualization of O(n log n) derivation](lectures/lect14-merge-sort-big-o.jpg){:target="_blank"}
 
 # Iclicker check-in
+
 Question 1: Given a list `[5, 4, 3, 2, 1]`, according to the book, what is the 2nd call added to the stack for the `merge_sort()`?
+
 ```
 A. merge_sort([5, 4, 3, 2, 1])
 B. merge_sort([5, 4, 3])
@@ -69,6 +72,7 @@ E. merge_sort([2, 1])
 ```
 
 Question 2: Given a list `[5, 4, 3, 2, 1]`, according to the book, what is the 3rd call added to the stack for the `merge_sort()`?
+
 ```
 A. merge_sort([5, 4, 3])
 B. merge_sort([5, 4])
