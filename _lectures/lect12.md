@@ -19,34 +19,40 @@ lecture_date: 2024-05-09 15:30:00 -0700
 Question 1:
 Which of the following assertions is False
 A linked list is...
+```
 A.
 B.
 C.
 D.
 E.
+```
 
 Question 2:
 Given a linked list, which attribute will it have as part of its class definition?
+```
 A. next
 B. data
 *C. head*
 D. self
 E. None of the above
+```
 
 Question 3:
 Given a node that will be part of a linked list, which attribute will it not have as part of its class definition?
+```
 A. next
 B. data
 C. head
 D. self
 E. None of the above
+```
 
 Question 4:
 Given the following lines of code, what order do they need to go in to correctly add a new node to the list?
 
 Question 5:
 Which operator do we need to overload to implement object comparison as follows?
-'''
+
 
 # Linked List versus Ordered Linked List
 (Unordered) Linked Lists
@@ -95,5 +101,5 @@ Case 2: Add a node past the start of the list
 - Bubble sort O(n^2) --> Bubble the largest element to the end of the list
 - Selection sort O(n^2) --> Find the INDEX of the largest element and swap it to the last spot
 - Worst case for these algorithms: A list sorted in reverse order
-- Visualization: https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/
+- Visualization: <https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/>
   
