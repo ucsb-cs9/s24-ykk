@@ -5,6 +5,8 @@ ready: true
 lecture_date: 2024-05-16 15:30:00 -0700
 ---
 
+[Lecture recording]()
+
 # Plan for today
 - Announcement about class on Tuesday
 - Overview important points about mergesort
@@ -13,7 +15,7 @@ lecture_date: 2024-05-16 15:30:00 -0700
 - Quicksort overview
 
 # Class Announcement
-- No class on Tuesday (5/12)
+- No class on Tuesday (5/21)
 - Watch posted recordings on website about quicksort
 - Review week 6 linear data structures videos
 
@@ -37,32 +39,34 @@ lecture_date: 2024-05-16 15:30:00 -0700
 - What asserts do we need to test the accuracy of the function?
   - Empty list1 and/or list 2
   - One element in each list
-'''
+```
 def sort_sorted_lists(listleft, listright, final):
-- please add code @ykharitonova
-
-'''
+  # TODO: add solution
+```
 
 # Visualize Mergesort 
 - Splitting - O(log n)
 - Merging - O(n)
-- please add visualization @ykharitonova
+- # TODO: add visualization
 
 # Iclicker check-in
-Question 1: Given a list [5, 4, 3, 2, 1], according to the book, what is the 2nd call added to the stack for the merge_sort()?
-- please fill in options @ykharitonova
+Question 1: Given a list `[5, 4, 3, 2, 1]`, according to the book, what is the 2nd call added to the stack for the `merge_sort()`?
+```
 A. merge_sort([5, 4, 3, 2, 1])
 B. merge_sort([5, 4, 3])
 C. merge_sort([5, 4])
-D.
-E.
+D. merge_sort([3, 2, 1])
+E. merge_sort([2, 1])
+```
 
-Question 2: Given a list [5, 4, 3, 2, 1], according to the book, what is the 3rd call added to the stack for the merge_sort()?
+Question 2: Given a list `[5, 4, 3, 2, 1]`, according to the book, what is the 3rd call added to the stack for the `merge_sort()`?
+```
 A. merge_sort([5, 4, 3])
 B. merge_sort([5, 4])
 *C. merge_sort([5])*
 D. merge_sort([4])
 E. merge_sort([2, 1])
+```
 
 # Binary Search
 - Binary search is a useful algorithm to search for an item if the list you're looking in is sorted
@@ -70,5 +74,5 @@ E. merge_sort([2, 1])
   - If the middle element is the one we're looking for, then great!
   - If the item we're looking for is < the middle element, then we don't have to search the right side of the list
   - If the item we're looking for is > the middle element, then we don't have to search the left side of the list
-- not sure if i got all the bullet points, could you please add them? @ykharitonova
+
 
