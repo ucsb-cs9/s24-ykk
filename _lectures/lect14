@@ -5,7 +5,7 @@ ready: true
 lecture_date: 2024-05-16 15:30:00 -0700
 ---
 
-[Lecture recording]()
+[Lecture recording](https://www.loom.com/share/42a487a77e02493a9671ee372cc91acd?sid=2c5b0abd-bddd-4258-8bc0-6d11c79a925f)
 
 # Plan for today
 - Announcement about class on Tuesday
@@ -43,6 +43,11 @@ lecture_date: 2024-05-16 15:30:00 -0700
 def sort_sorted_lists(listleft, listright, final):
   # TODO: add solution
 ```
+
+The point of this exercise is to create your own solution, so that when you look at the code example in the textbook, it makes more sense how to goes about doing the merging. 
+In this exercise, we are storing the resulting list in the empty list passed through the `final` parameter, however, in the merge sort, we are operating directly on the larger list, 
+which is why we need the `k` index -- it keeps the position in the list that's passed directly into the function; we are effectively overwriting its contents, because the values are stored in the 
+left and right _copies_ of the list.
 
 # Visualize Mergesort 
 - Splitting - O(log n)
