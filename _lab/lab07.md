@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab07
-ready: draft
+ready: true
 desc: "Apartment Listing Manager"
 assigned: 2024-05-21 23:59:59.59-7
 due: 2024-05-28 23:59:59.59-7
@@ -30,7 +30,7 @@ You will also write pytests in `testFile.py` illustrating your behavior works co
 
 You will need to create six files:
 * `Apartment.py` - Defines a Apartment class representing commonality for all Apartments. For simplicity, this class will assume all Apartments have a `price` and `view`.
-* `StudioApartment.py` - Defines a child class of Apartment. This class should inherit all fields / methods from the Apartment class, but also introduces the concepts of amenities a customer can order (represented as a list of strings).
+* `StudioApartment.py` - Defines a child class of Apartment. This class should inherit all fields / methods from the Apartment class, but also introduces the concepts of amenities a customer can add (represented as a list of strings).
 * `FamilyApartment.py` - Defines a child class of Apartment. This class should inherit all fields / methods from the Apartment class. Famiy apartments are defined by a layout attribute and all have a set price depending on the apartment view.
 * `ApartmentListing.py` - Defines a class that is a collection of apartment objects the customer wants to view. The total price for the viewings can be derived from each individual apartment price. This class will also have an expected date of when the customer would like to view the apartments on the listing. More details on this later in the writeup.
 * `ListingQueue.py` - Defines a MinHeap to organize and process Apartment Listings according to their expected date of showing. You can adapt the Heap implementation shown in the textbook supporting the specifications in this lab.
@@ -61,7 +61,7 @@ Your Apartment class definition should also support the "getter" and "setter" me
 # StudioApartment.py and FamilyApartment.py
 
 `Apartment` objects can be two different types. Both of these types of apartments inherit from the Apartment class:
-1. `StudioApartment` that allows the customers to add additional toppings of their choosing
+1. `StudioApartment` that allows the customers to add additional amenities of their choice
 2. `FamilyApartment` that has already been pre-configured and has a fixed price based on its view
 
 ## StudioApartment.py
@@ -71,15 +71,15 @@ The price of a StudioApartment is defined by two things:
 1. the view of the apartment
 2. the number of amenties the apartment will have (assuming no amenities, it is an unfurnished simple apartment). StudioApartment will have the following fixed prices based on its view:
 
-* City (C): $8.75
-* Park (P): $10.75
-* Lake (L): $12.75
+* City (C): $1,200
+* Park (P): $1,500
+* Lake (L): $1,800
 
 The view from the apartment also dictates the number of additional amenities will cost based on the following definition:
 
-* City (C): + $1.75 per additional amenity
-* Park (P): + $2.50 per additional amenity
-* Lake (L): + $3.00 per additional amenity
+* City (C): + $50.75 per additional amenity
+* Park (P): + $60.50 per additional amenity
+* Lake (L): + $80.00 per additional amenity
 
 Since we now know that the price of an apartment should be based on the view, the `StudioApartment` constructor should determine the base price of the apartment and set it appropriately (remember, no need to write it in this class if we already have the method in `Apartment.py`).
 
@@ -101,7 +101,7 @@ assert sa1.get_apartment_details() == \
 STUDIO APARTMENT
 View: C
 Amenities:
-Price: $8.75
+Price: $1200.00
 """
 ```
 
@@ -119,7 +119,7 @@ View: L
 Amenities:
 \t+ balcony/patio
 \t+ dishwasher
-Price: $18.75
+Price: $1960.00
 """
 ```
 
@@ -131,9 +131,9 @@ A `FamilyApartment` class definition will exist in `FamilyApartment.py`. Similar
 
 Also similar to the `StudioApartment` class, `FamilyApartment` will use the view to set its price appropriately. The price of a `FamilyApartment` is defined as follows:
 
-* City (C): $12.50
-* Park (P): $14.50
-* Lake (L): $16.50
+* City (C): $2,500
+* Park (P): $3,000
+* Lake (L): $3,500
 
 Unlike studio apartments, family apartments do not have a list of amenities associated with it, but do have a unique layout that will be displayed when getting details for this apartment. This class should also have its own `get_apartment_details` method described below:
 
@@ -148,7 +148,7 @@ assert fa1.get_apartment_details() == \
 FAMILY APARTMENT
 View: C
 Layout: Modern
-Price: $12.50
+Price: $2500.00
 """
 ```
 
@@ -173,7 +173,7 @@ In addition to the constructor, getters for the date attribute, the ability to a
 
 * `get_date(self)`
 * `add_apartment(self, apartment)` - will add the apartment object to the end of the Python List
-* `info(self)` - constructs and returns a string containing the date of the lisitng, all information for each apartment in the listing, as well as the total listing price. Since we're storing various Apartment objects in this class, we can utilize polymorphism and simply call the `get_apartment_details()` method on the Apartment objects when constructing the string for our entire listing, as well as `get_price()` to compute the `ApartmentListing` total price
+* `info(self)` - constructs and returns a string containing the date of the listng, all information for each apartment in the listing, as well as the total listing price. Since we're storing various Apartment objects in this class, we can utilize polymorphism and simply call the `get_apartment_details()` method on the Apartment objects when constructing the string for our entire listing, as well as `get_price()` to compute the `ApartmentListing` total price
 
 An example of the `info()` string format is given below:
 
@@ -184,7 +184,7 @@ sa1.add_amenity("dishwasher")
 fa1 = FamilyApartment("C", "Modern")
 listing = ApartmentListing(20250101) #January 1, 2025
 listing.add_apartment(sa1)
-lisiting.add_apartment(fa1)
+listing.add_apartment(fa1)
 
 assert listing.info() == \
 """\
@@ -192,19 +192,19 @@ assert listing.info() == \
 Date of Viewing: 20250101
 STUDIO APARTMENT
 View: L
-Toppings:
+Amenities:
 \t+ balcony/patio
 \t+ dishwasher
-Price: $12.25
+Price: $1960.00
 
 ----
 FAMILY APARTMENT
 View: C
 Layout: Open
-Price: $12.50
+Price: $2500.00
 
 ----
-TOTAL APARTMENT LISTING: $24.75
+TOTAL APARTMENT LISTING: $4460.00
 ***
 """
 ```
@@ -222,6 +222,47 @@ In addition to the construction of the MinHeap in this class, two methods are re
 
 The automated tests will create various apartment listings with different date attributes. It will then call `process_next_listing()` one at a time and check the removed ApartmentListing is in the right priority by checking their expected `info()` string. You should write similar tests to confirm the MinHeap state is in the correct order.
 
+For example:
+```python
+listing1 = ApartmentListing(20240417)   #April 17,2024
+sa1 = StudioApartment("P")
+listing1.add_apartment(sa1)
+listing2 = ApartmentListing(20240115)   #January 15,2024
+sa2 = StudioApartment("L")
+sa2.add_amenity("balcony/patio")
+sa2.add_amenity("dishwasher")
+listing2.add_apartment(sa2)
+listing3 = ApartmentListing(20240415)    #April 15,2024
+fa1 = FamilyApartment("L", "Modern")
+listing3.add_apartment(fa1)
+listing4 = ApartmentListing(20240215)    #February 15,2024
+fa2 = FamilyApartment("C", "Open")
+listing4.add_apartment(fa2)
+
+listingQueue = ListingQueue()
+listingQueue.add_listing(listing1)
+listingQueue.add_listing(listing2)
+listingQueue.add_listing(listing3)
+listingQueue.add_listing(listing4)
+
+print(listingQueue.process_next_listing())
+```
+
+Output:
+```python
+***
+Date of Viewing: 20240115
+STUDIO APARTMENT
+View: L
+Amenities:
+        + balcony/patio
+        + dishwasher
+Price: $1960.00
+
+----
+TOTAL APARTMENT LISTING PRICE: $1960.00
+***
+```
 
 # testFile.py
 
@@ -245,7 +286,4 @@ There will be various unit tests Gradescope will run to ensure your code is work
 
 If the tests don't pass, you may get some error message that may or may not be obvious at this point. Don't worry - if the tests didn't pass, take a minute to think about what may have caused the error. If your tests didn't pass and you're still not sure why you're getting the error, feel free to ask your TAs or Learning Assistants.
 
-# Troubleshooting
-
-TBA
 
