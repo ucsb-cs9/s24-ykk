@@ -200,11 +200,11 @@ Price: $1960.00
 ----
 FAMILY APARTMENT
 View: C
-Layout: Open
+Layout: Modern
 Price: $2500.00
 
 ----
-TOTAL APARTMENT LISTING: $4460.00
+TOTAL APARTMENT LISTING PRICE: $4460.00
 ***
 """
 ```
