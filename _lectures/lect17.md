@@ -1,5 +1,5 @@
 ---
-num: "Lecture 15"
+num: "Lecture 17"
 desc: "Trees, Priority Queues, Heaps"
 ready: true
 lecture_date: 2024-05-28 15:30:00 -0700
