@@ -34,7 +34,7 @@ lecture_date: 2024-05-28 15:30:00 -0700
 
 # Binary Trees vs Binary Search Trees
 - Binary Trees: a tree structure where a node may have at most two children
-  - Guaranteed to be balanced
+  - **Cannot** be guaranteed to be balanced
 - BST: binary trees that have the BST property
   - Not guaranteed to be balanced
   - Insertion order into a BST affects tree structure
@@ -44,13 +44,13 @@ lecture_date: 2024-05-28 15:30:00 -0700
  
 # Nodes and References
 - Binary trees store nodes (like with linked lists)
-- Each node has a left_child and right_child link (unlike linked lists)
+- Each node has a `left_child` and `right_child` link (unlike linked lists)
 
 # Map ADT
 - Can be implemented using BSTs: maps keys to corresponding values
 - Keys define where in the BST structure a node is inserted
 - Each node has a corresponding value field
-- Similar to dictionaries
+- Similar to dictionaries in Python
 
 # Tree Traversal Algorithms
 - A way to visit all nodes in a tree
@@ -58,7 +58,20 @@ lecture_date: 2024-05-28 15:30:00 -0700
   - Preorder: N, L, R. Visit node, recursively go down left subtree, recursively go down right subtree
   - Inorder: L, N, R. Recursively go down left subtree, visit node, recursively go down right subtree
   - Postorder: L, R, N. Recursively go down left subtree, recursively go down right subtree, visit node
+ 
+The name of the traversal method tells you when the node that you are visiting should be printed:
+- pre-order: (pre-) means that the node is printed first (_before_ printing the left and right subtree)
+- in-order: (in-) means that the node is printed **in**-between printing the left and right subtree
+- post-order: (post-) means that the node is printed last, after the children (post printing the left and right subtree)
 
 # Heap
-- MaxHeap: the value of a node is never less than the value of its children
+- MaxHeap: the value of any node is never less than the value of its children
+  - another way to say it is: the value of any node is always greater than the value of its children
+  - the max value is always at the root
 - MinHeap: the value of a node is never greater than the value of its children
+  - another way to say it is: the value of any node is always smaller than the value of its children
+  - the min value is always at the root
+ 
+By repeatedly removing the elements from a heap, we retreive them in **sorted** order.
+
+Printing the values in a BST using inorder traversal, prints them in **sorted** order. Note: This is not the case for regular binary trees.
