@@ -338,7 +338,7 @@ An example of the `inorder()` string format is given below:
     print(tree.inorder()) # ' 0101  0317  0607  0616  1031  1225 '
 ```
 
-
+**Note**: there is an extra space before and after the node values and each node is separated from another by **two** spaces.
 
 # testFile.py
 
