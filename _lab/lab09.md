@@ -4,7 +4,7 @@ num: lab09
 ready: true
 desc: "Event Management - BST Deletion"
 assigned: 2024-06-04 23:59:59.59-7
-due: 2024-06-07 23:59:59.59-7
+due: 2024-06-09 23:59:59.59-7
 ---
 
 In this lab, you'll have the opportunity to practice:
