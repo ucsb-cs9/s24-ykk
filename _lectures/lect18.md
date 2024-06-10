@@ -98,9 +98,12 @@ class TreeNode:
     pass
 ```
 
-Q: what does has_left_child() and has_right_child() return?
+Q: what does `has_left_child()` and `has_right_child()` return?
 
 A: they return the values of the left and right attributes, which can be None or a TreeNode. But None evaluates to False and TreeNode evaluates to True in a boolean expression. So getting the left and right child also allows you to check whether the left and right children exist or not.
+
+
+### Testing the classes
 
 We can start testing the TreeNode class:
 ```
@@ -178,7 +181,7 @@ The following methods are part of the BST class defined above:
         current.right = TreeNode(key, val, parent=current)
 ```
 
-Now let's test our put method:
+Now let's test our `put()` method:
 ```
 class TestBST:
   def test_root(self):
