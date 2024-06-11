@@ -6,7 +6,7 @@ lecture_date: 2024-06-06 15:30:00 -0700
 ---
 
 # Plan for today
-- Why do we need to have 2 seperate classes? BinarySearchTree vs TreeNode
+- Why do we need to have 2 separate classes? BinarySearchTree vs TreeNode
 - How to define classes? Which methods do we need?
 - What are the 3 cases for deleting a node?
 - How to implement each deletion case?
@@ -19,18 +19,18 @@ lecture_date: 2024-06-06 15:30:00 -0700
 - No additional materials allowed
 - **Bring photo ID**
 - Bring a writing utensil (pencil and an eraser are recommended over pens) 
-- Write legibly - if we can't read it, it'll be marked as incorrect; similarly, if the answer contains correct and incorrect components, it'll be graded as incorrect
+- Write legibly: if we can't read it, it'll be marked as incorrect; similarly, if the answer contains correct and incorrect components, it'll be graded as incorrect
 - Bathroom breaks are not allowed; unless it is an emergency in which case will be with a chaperone and timed
 - If someone shows up late for the exam and another student had already turned in their exam, we won't let the tardy student take the exam
 
 # Final exam type questions
-- Types of questions:
-  - True / False
-  - Short answer
-  - Given same code, write the output
-  - Write code satisfying a specification (short code examples)
-  - Given an algorithm we covered, fill in the blanks
-  - Draw diagrams, states of list
+Types of questions:
+- True / False
+- Short answer
+- Given same code, write the output
+- Write code satisfying a specification (short code examples)
+- Given an algorithm we covered, fill in the blanks
+- Draw diagrams, states of list
 - Refer to previous labs, homeworks, concepts we have covered several times
 
 # Exam topics
@@ -46,9 +46,10 @@ lecture_date: 2024-06-06 15:30:00 -0700
 See slides for a more detailed breakdown
 
 ### Student Questions
-- What is meant by "Pass 1, Pass 2, Pass 3" in the context of sorting algorithms (what does a pass mean)?
-  - each pass places one item into its correct location
-- Review three types of quadratic sort (the steps of each procedure)
+Q1: What is meant by "Pass 1, Pass 2, Pass 3" in the context of sorting algorithms (what does a pass mean)?
+A1: each pass places one item into its correct location
+
+Q2: Review three types of quadratic sort (the steps of each procedure)
 
 # Lab review 
 
@@ -65,7 +66,7 @@ Question 2: What node replaces the deleted node 17?
 A. 7
 B. 16
 C. 35
-*D. 29*
+D. 29 (correct)
 E. 38
 ```
 
@@ -75,7 +76,7 @@ A. 2
 B. 11
 C. 16
 D. 9
-*E. 8*
+E. 8 (correct)
 ```
 
 ### Student Questions
